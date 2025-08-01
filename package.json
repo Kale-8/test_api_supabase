@@ -1,0 +1,24 @@
+{
+  "name": "test_api_supabase",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "backend": "nodemon src/backend/js/main.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "concurrently \"npm run dev\" \"npm run backend\""
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "dotenv": "^17.2.1",
+    "nodemon": "^3.1.10",
+    "vite": "^7.0.6"
+  }
+}
