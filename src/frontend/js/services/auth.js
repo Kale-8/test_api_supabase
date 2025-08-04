@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export async function login(email, password) {
     try {
-        const response = await axios.get('http://localhost:3000/authUsers');
+        const response = await axios.get('http://localhost:3000/users');
         const users = response.data;
         const user = users.find(u => u.email === email.trim() && u.password === password);
 
