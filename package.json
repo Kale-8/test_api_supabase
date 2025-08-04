@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend": "nodemon src/backend/js/main.js",
+    "backend": "nodemon src/backend/js/app.js",
     "build": "vite build",
     "preview": "vite preview",
     "start": "concurrently \"npm run dev\" \"npm run backend\""
