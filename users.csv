@@ -1,0 +1,4 @@
+name,email,password,role
+Alice Johnson,alice.johnson@example.com,AlicePass123,admin
+Bob Smith,bob.smith@example.com,BobSecure456,visitor
+Clara Lee,clara.lee@example.com,Clara789!,visitor
