@@ -63,14 +63,15 @@ export async function renderDashboard(tag) {
         }
         if (button.dataset.action === 'enroll' && !isAdmin()) {
             button.onclick = async () => {
-                const getEvent = await getEntry(id, 'events');
+                let getEvent = await getEntry(id, 'events');
+                getEvent = getEvent[0];
                 if (getEvent.capacity === 0) {
                     alertify.error('Event is sold out');
                     return
                 }
                 const enrollment = {
-                    eventId: getEvent.id,
-                    userId: getCurrentUser().userId
+                    event_id: getEvent.id,
+                    user_id: getCurrentUser().userId
                 }
                 await addEntry(enrollment, 'enrollments');
                 alertify.success('Event enrolled successfully');

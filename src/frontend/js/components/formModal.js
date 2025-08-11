@@ -8,6 +8,7 @@ export const renderFormModal = async (tag, id = null) => {
     if (isEdit) {
         try {
             event = await getEntry(id, 'events');
+            event = event[0];
         } catch (error) {
             console.error('Error fetching event:', error);
             return;

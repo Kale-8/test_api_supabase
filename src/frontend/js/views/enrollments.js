@@ -7,9 +7,9 @@ export async function renderEnrollments(tag) {
     const events = await getEntries('events');
 
     const userEnrollments = enrollments
-        .filter(enrollment => enrollment.userId === userId)
+        .filter(enrollment => enrollment.user_id === userId)
         .map(enrollment => {
-            const event = events.find(event => event.id === enrollment.eventId);
+            const event = events.find(event => event.id === enrollment.event_id);
             return {
                 ...enrollment,
                 name: event.name,
